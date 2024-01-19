@@ -3,6 +3,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+import MyApp from './app'
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<h1>Hello, world!</h1>)
+root.render(
+    <React.StrictMode>
+        <MyApp />
+    </React.StrictMode>
+)
