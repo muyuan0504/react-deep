@@ -1,3 +1,13 @@
+/** 
+ * JSX 是 JavaScript 语法扩展，可以让你在 JavaScript 文件中书写类似 HTML 的标签
+ * JSX 语法更加严格并且相比 HTML 有更多的规则
+ * 1. 只能返回一个根元素 如果不想在标签中增加一个额外的 <div>，可以用 <> 和 </> 元素来代替
+ * 2. 标签必须闭合 像 <img> 这样的自闭合标签必须书写成 <img />
+ * 3. 使用驼峰式命名法给大部分属性命名！ 比如：className="photo"
+
+ * 
+ */
+
 // import React from 'react'
 import React, { useState } from 'react'
 
