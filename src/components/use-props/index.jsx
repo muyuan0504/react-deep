@@ -13,7 +13,11 @@ const UseProps = (props) => {
 
     const { appCount, setappCount } = stateProp
 
-    const btnClick = () => setappCount(appCount + 1)
+    const btnClick = (e) => {
+        /** 阻止事件捕获，将btnClick传递给 componentA 时，可以避免component A 中children 的父组件上面的点击事件被触发 */
+        e.stopPropagation()
+        setappCount(appCount + 1)
+    }
 
     return (
         <>
@@ -25,8 +29,8 @@ const UseProps = (props) => {
             <p>
                 <button onClick={btnClick}>appCount++</button>
             </p>
-            {/** 使用 JSX 支持展开语法传递 props  */}
-            <ComponentA {...props}>
+            {/** 使用 JSX 支持展开语法传递 props, 支持传递事件，事件名相当于props的一个属性   */}
+            <ComponentA {...props} onClick={btnClick}>
                 {/** 组件的slot将以children的形式传递给组件内部 */}
                 <span>children in Component A</span>
             </ComponentA>
