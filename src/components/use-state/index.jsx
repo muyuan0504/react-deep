@@ -67,6 +67,8 @@ const UseState = (props) => {
     // let [count, setCount] = useState(0)
     const [count, setCount] = useState(0)
 
+    const calcCount = count + 1
+
     /** useState 使用引用类型
      * - state 中可以保存任意类型的 JavaScript 值，包括对象, 同时，把所有存放在 state 中的 JavaScript 对象都视为只读的
      * 但是，你不应该直接修改存放在 React state 中的对象。
@@ -76,9 +78,9 @@ const UseState = (props) => {
      * 同对象一样，你需要将 React state 中的数组视为只读的。
      * 这意味着你不应该使用类似于 arr[0] = 'bird' 这样的方式来重新分配数组中的元素，也不应该使用会直接修改原始数组的方法，例如 push() 和 pop()
      * 相反，每次要更新一个数组时，你需要把一个新的数组传入 state 的 setting 方法中
-	 * 数组的删除：从数组中删除一个元素最简单的方法就是将它过滤出去。换句话说，你需要生成一个不包含该元素的新数组
-	 * 数组的转换：map()
-	 * 更新数组内部的对象： 当你更新一个嵌套的 state 时，你需要从想要更新的地方创建拷贝值，一直这样，直到顶层
+     * 数组的删除：从数组中删除一个元素最简单的方法就是将它过滤出去。换句话说，你需要生成一个不包含该元素的新数组
+     * 数组的转换：map()
+     * 更新数组内部的对象： 当你更新一个嵌套的 state 时，你需要从想要更新的地方创建拷贝值，一直这样，直到顶层
      *
      */
     const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -139,6 +141,9 @@ const UseState = (props) => {
                 {/* <button onClick={() => setCount(count++)}>count++</button> */}
                 <button onClick={() => setCount(count + 1)}>count++</button>
                 <button onClick={batchSet}>batchSet</button>
+            </p>
+            <p>
+                <span>calcCount: {calcCount}</span>
             </p>
             <h5>引用数据类型：</h5>
             <div
