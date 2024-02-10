@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import UseJsx from './components/use-jsx'
 import UseProps from './components/use-props'
 import UseState from './components/use-state'
+import UseReducer from './components/use-reducer'
 
 export default function MyApp() {
     const appData = { count: 0 }
@@ -17,7 +18,8 @@ export default function MyApp() {
             {/* React 组件必须以大写字母开头，而 HTML 标签则必须是小写字母 */}
             {/* <UseJsx /> */}
             {/* <UseProps appData={appData} stateProp={stateProp} /> */}
-            <UseState />
+            {/* <UseState /> */}
+            <UseReducer />
         </React.StrictMode>
     )
 }
