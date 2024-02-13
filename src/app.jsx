@@ -3,6 +3,8 @@ import UseJsx from './components/use-jsx'
 import UseProps from './components/use-props'
 import UseState from './components/use-state'
 import UseReducer from './components/use-reducer'
+import UseContext from './components/use-context'
+import UseRef from './components/use-ref'
 
 export default function MyApp() {
     const appData = { count: 0 }
@@ -19,7 +21,9 @@ export default function MyApp() {
             {/* <UseJsx /> */}
             {/* <UseProps appData={appData} stateProp={stateProp} /> */}
             {/* <UseState /> */}
-            <UseReducer />
+            {/* <UseReducer /> */}
+            {/* <UseContext /> */}
+            <UseRef />
         </React.StrictMode>
     )
 }
