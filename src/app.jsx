@@ -6,6 +6,7 @@ import UseReducer from './components/use-reducer'
 import UseContext from './components/use-context'
 import UseRef from './components/use-ref'
 import UseEffect from './components/use-effect'
+import DefineHook from './components/define-hook'
 
 export default function MyApp() {
     const appData = { count: 0 }
@@ -25,7 +26,8 @@ export default function MyApp() {
             {/* <UseReducer /> */}
             {/* <UseContext /> */}
             {/* <UseRef /> */}
-            <UseEffect />
+            {/* <UseEffect /> */}
+            <DefineHook />
         </React.StrictMode>
     )
 }
