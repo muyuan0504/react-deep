@@ -5,6 +5,7 @@ import UseState from './components/use-state'
 import UseReducer from './components/use-reducer'
 import UseContext from './components/use-context'
 import UseRef from './components/use-ref'
+import UseEffect from './components/use-effect'
 
 export default function MyApp() {
     const appData = { count: 0 }
@@ -23,7 +24,8 @@ export default function MyApp() {
             {/* <UseState /> */}
             {/* <UseReducer /> */}
             {/* <UseContext /> */}
-            <UseRef />
+            {/* <UseRef /> */}
+            <UseEffect />
         </React.StrictMode>
     )
 }
