@@ -9,6 +9,10 @@ import UseEffect from './components/use-effect'
 import UseMemo from './components/use-memo'
 import UseCallback from './components/use-callback'
 import DefineHook from './components/define-hook'
+import UseRoute from './components/use-route'
+import UseRouteComA from './components/use-route/UseRouteComA'
+
+import { Routes, Route } from 'react-router-dom'
 
 export default function MyApp() {
     const appData = { count: 0 }
@@ -30,8 +34,18 @@ export default function MyApp() {
             {/* <UseRef /> */}
             {/* <UseEffect /> */}
             {/* <UseMemo /> */}
-            <UseCallback />
+            <UseRoute />
+
+            {/* <UseCallback /> */}
             {/* <DefineHook /> */}
         </React.StrictMode>
     )
 }
+
+/** 命名式路由 */
+// ;<Routes>
+//     {/* 当基于hash路由时，生成的路径为/#index */}
+//     <Route path='/index' element={<UseRoute />} />
+//     <Route path='/isA' element={<UseRouteComA />} />
+//     <Route path='*' element={<div>兜底的div</div>} />
+// </Routes>

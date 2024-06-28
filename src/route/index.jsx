@@ -9,20 +9,15 @@
  * 针对 Web 应用程序的库，它构建在 react-router 之上，并提供了与浏览器 DOM 相关的额外功能
  * 包含了在 Web 应用中常用的组件，比如 <BrowserRouter>、<Link> 等，这些组件用于在应用中创建链接、处理浏览器历史记录等
  */
-import * as React from 'react'
-import { createBrowserRouter, Link } from 'react-router-dom'
+import React from 'react'
+import { createHashRouter, Link } from 'react-router-dom'
 
-import MyApp from '../app'
+import App from '@/app'
 
-const router = createBrowserRouter([
+const routes = createHashRouter([
     {
         path: '/',
-        element: (
-            <div>
-                <h1>Hello World</h1>
-                <Link to='about'>About Us</Link>
-            </div>
-        ),
+        element: <App />,
         children: [
             {
                 path: '/about',
@@ -39,12 +34,12 @@ const router = createBrowserRouter([
                     },
                 ],
             },
-            {
-                path: 'home',
-                element: <MyApp />,
-            },
+            // {
+            //     path: 'home',
+            //     element: <MyApp />,
+            // },
         ],
     },
 ])
 
-export default router
+export default routes
