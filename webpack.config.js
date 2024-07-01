@@ -32,6 +32,7 @@ module.exports = {
     devServer: {
         static: './dist',
         hot: true,
+        port: 9091,
     },
     mode: process.env.NODE_ENV,
 }

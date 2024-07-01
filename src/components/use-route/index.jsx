@@ -7,14 +7,15 @@ function UseRoute() {
      */
     const navigate = useNavigate()
 
-    const handleClick = () => {
-        navigate('/about')
+    const handleClick = (route) => {
+        navigate(route || '/about')
     }
 
     return (
         <React.StrictMode>
             <div>use-route</div>
             <div onClick={handleClick}>点击跳转</div>
+            <div onClick={() => handleClick('father')}>点击跳转嵌套路由</div>
         </React.StrictMode>
     )
 }
