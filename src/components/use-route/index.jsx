@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate, Link, NavLink } from 'react-router-dom'
 
-// import './index.scss'
+import styles from './index.module.scss'
 
 function UseRoute() {
     /**
@@ -27,7 +27,7 @@ function UseRoute() {
 
     return (
         <React.StrictMode>
-            <div>use-route: </div>
+            <div className={styles.showItem}>use-route: </div>
             <div onClick={handleClick}>点击跳转到PageA</div>
             <div onClick={() => goToPageA('/pageA')}>点击跳转到页面A</div>
             <div>

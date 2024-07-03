@@ -17,7 +17,8 @@ module.exports = {
                 use: ['babel-loader'],
             },
             {
-                test: /\.[s|c]ss/,
+                // test: /\.[s|c]ss/,  // 匹配规则写错了，不能用元字符[]
+                test: /\.(sa|sc|c)ss$/,
                 exclude: /node_modules/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
