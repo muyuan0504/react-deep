@@ -1,5 +1,7 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link, NavLink } from 'react-router-dom'
+
+// import './index.scss'
 
 function UseRoute() {
     /**
@@ -7,15 +9,34 @@ function UseRoute() {
      */
     const navigate = useNavigate()
 
-    const handleClick = (route) => {
-        navigate(route || '/about')
+    // 注意：绑定事件的时候，会默认接收事件实例，所以当直接绑定函数时，参数的处理需要第一个事件参数；除非是 onClick={() => handleClick('father')} 这种绑定方式
+    // const handleClick = (route) => {
+    //     navigate(route || '/pageA')
+    // }
+    const handleClick = (_e, route) => {
+        navigate(route || '/pageA')
+    }
+
+    const goToPageA = (route) => {
+        navigate(route)
+    }
+
+    const locationToPageA = () => {
+        window.location.hash = '#/pageA'
     }
 
     return (
         <React.StrictMode>
-            <div>use-route</div>
-            <div onClick={handleClick}>点击跳转</div>
-            <div onClick={() => handleClick('father')}>点击跳转嵌套路由</div>
+            <div>use-route: </div>
+            <div onClick={handleClick}>点击跳转到PageA</div>
+            <div onClick={() => goToPageA('/pageA')}>点击跳转到页面A</div>
+            <div>
+                <Link to='pageA'>跳转到PageA</Link>
+            </div>
+            <div>
+                <NavLink to='pageA'>Navlink跳转</NavLink>
+            </div>
+            <div onClick={locationToPageA}>windonw.location跳转</div>
         </React.StrictMode>
     )
 }
