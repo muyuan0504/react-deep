@@ -2,6 +2,9 @@ import React from 'react'
 import { useNavigate, Link, NavLink } from 'react-router-dom'
 
 import styles from './index.module.scss'
+import textStyles from './text.module.scss'
+
+console.error('---------- aiden --------------', textStyles)
 
 function UseRoute() {
     /**
@@ -27,7 +30,10 @@ function UseRoute() {
 
     return (
         <React.StrictMode>
-            <div className={styles.showItem}>use-route: </div>
+            <div className={`${styles.showItem} flex-box`}>
+                <span>use-route: </span>
+                <div className={styles.showUse}>这个是border</div>
+            </div>
             <div onClick={handleClick}>点击跳转到PageA</div>
             <div onClick={() => goToPageA('/pageA')}>点击跳转到页面A</div>
             <div>
@@ -36,7 +42,9 @@ function UseRoute() {
             <div>
                 <NavLink to='pageA'>Navlink跳转</NavLink>
             </div>
-            <div onClick={locationToPageA}>windonw.location跳转</div>
+            <div className={textStyles.textColor} onClick={locationToPageA}>
+                windonw.location跳转
+            </div>
         </React.StrictMode>
     )
 }

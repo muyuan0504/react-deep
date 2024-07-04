@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: path.resolve(__dirname, './src/index'),
     resolve: {
-        extensions: ['.js', '.json', '.jsx'], // 配置解析支持的文件扩展名，这样就不用在文件路径引入的时候,需要加 .jsx 后缀了
+        extensions: ['.js', '.json', '.jsx', '.scss'], // 配置解析支持的文件扩展名，这样就不用在文件路径引入的时候,需要加 .jsx 后缀了
         alias: {
             '@': path.resolve(__dirname, './src'),
         },

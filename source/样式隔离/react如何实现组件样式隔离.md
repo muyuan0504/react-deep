@@ -4,6 +4,8 @@
 
 CSS Modules 是一种 CSS 文件的模块化方案，它可以让你为每个组件定义独立的样式，避免样式冲突
 
+基于 create-react-app 创建的项目默认支持 CSS Modules，因此不需要额外安装依赖
+
 ```css
 /* src/App.module.css */
 .appHeader {
@@ -108,7 +110,7 @@ export default App
 
 4. Scoped Styles with SCSS
 
-可以通过 SCSS 和 Webpack 的模块化功能实现组件样式的隔离
+可以通过 SCSS 和 Webpack 的模块化功能实现组件样式的隔离, 需要注意的是，为了保证能引入 scss 模块对象，scss 文件的命名需要基于 xxx.module.scss 的格式，必须要有 .module 标识
 
 ```bash
 npm install sass style-loader css-loader sass-loader --save-dev
@@ -142,3 +144,5 @@ function App() {
 
 export default App
 ```
+
+styles.appHeader 会被创建一个唯一标识，类似于 <header class="cDDx4KlPghp6PIeN5KM2">，要注意的是，如果另一个组件也引用了这个 styles 对象，会同样沿用 [cDDx4KlPghp6PIeN5KM2] 该 class 标识

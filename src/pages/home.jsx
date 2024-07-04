@@ -12,6 +12,7 @@ import UseCallback from '@/components/use-callback'
 import DefineHook from '@/components/define-hook'
 import UseRoute from '@/components/use-route'
 import UseRouteComA from '@/components/use-route/UseRouteComA'
+import CssInJs from '@/components/cssInJs/index'
 
 const PageHome = () => {
     const appData = { count: 0 }
@@ -21,6 +22,7 @@ const PageHome = () => {
     return (
         <React.StrictMode>
             <h3>HOME: </h3>
+            <div className='flex-box'>这个是一个flexBox</div>
             {/* React 组件必须以大写字母开头，而 HTML 标签则必须是小写字母 */}
             {/* <UseJsx /> */}
             {/* <UseProps appData={appData} stateProp={stateProp} /> */}
@@ -31,7 +33,7 @@ const PageHome = () => {
             {/* <UseEffect /> */}
             {/* <UseMemo /> */}
             <UseRoute />
-
+            <CssInJs />
             {/* <UseCallback /> */}
             {/* <DefineHook /> */}
         </React.StrictMode>

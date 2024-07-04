@@ -4,6 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import MyApp from './app'
+import '@/static/style/common'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
