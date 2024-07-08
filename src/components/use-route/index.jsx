@@ -4,8 +4,6 @@ import { useNavigate, Link, NavLink } from 'react-router-dom'
 import styles from './index.module.scss'
 import textStyles from './text.module.scss'
 
-console.error('---------- aiden --------------', textStyles)
-
 function UseRoute() {
     /**
      * 使用 useNavigate 的优点是它允许你在函数式组件中直接进行路由导航，而不需要像类组件中使用的 history 对象或 props.history.push 方法
@@ -28,6 +26,8 @@ function UseRoute() {
         window.location.hash = '#/pageA'
     }
 
+  
+
     return (
         <React.StrictMode>
             <div className={`${styles.showItem} flex-box`}>
@@ -40,7 +40,7 @@ function UseRoute() {
                 <Link to='pageA'>跳转到PageA</Link>
             </div>
             <div>
-                <NavLink to='pageA'>Navlink跳转</NavLink>
+                
             </div>
             <div className={textStyles.textColor} onClick={locationToPageA}>
                 windonw.location跳转

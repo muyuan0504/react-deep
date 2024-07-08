@@ -1,7 +1,6 @@
 import React from 'react'
 
 import styled from 'styled-components'
-console.error('---------- styled --------------', styled)
 
 /** styled.header -> 会生成一个带有唯一id标识的header标签 <header class="sc-beqWNU jbPySM"><  */
 const DivHeader = styled.header`
