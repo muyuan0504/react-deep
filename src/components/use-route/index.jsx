@@ -26,8 +26,6 @@ function UseRoute() {
         window.location.hash = '#/pageA'
     }
 
-  
-
     return (
         <React.StrictMode>
             <div className={`${styles.showItem} flex-box`}>
@@ -35,15 +33,13 @@ function UseRoute() {
                 <div className={styles.showUse}>这个是border</div>
             </div>
             <div onClick={handleClick}>点击跳转到PageA</div>
-            <div onClick={() => goToPageA('/pageA')}>点击跳转到页面A</div>
+            {/* <div onClick={() => goToPageA('/pageA')}>点击跳转到页面A</div> */}
             <div>
-                <Link to='pageA'>跳转到PageA</Link>
+                <Link to='pageA'>通过Link跳转到PageA</Link>
             </div>
-            <div>
-                
-            </div>
+            <div></div>
             <div className={textStyles.textColor} onClick={locationToPageA}>
-                windonw.location跳转
+                windonw.location跳转到PageA
             </div>
         </React.StrictMode>
     )

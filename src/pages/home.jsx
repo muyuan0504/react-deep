@@ -33,7 +33,7 @@ const PageHome = () => {
             {/* <UseEffect /> */}
             {/* <UseMemo /> */}
             <UseRoute />
-            <CssInJs />
+            {/* <CssInJs /> */}
             {/* <UseCallback /> */}
             {/* <DefineHook /> */}
         </React.StrictMode>

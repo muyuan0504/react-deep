@@ -10,44 +10,38 @@
  * 包含了在 Web 应用中常用的组件，比如 <BrowserRouter>、<Link> 等，这些组件用于在应用中创建链接、处理浏览器历史记录等
  */
 import React from 'react'
-import { createHashRouter } from 'react-router-dom'
 
-import App from '@/app'
+import PageIndex from '@/pages/index'
 import PageA from '@/pages/PageA'
 import PageFather from '@/pages/nestPage/father'
 import PageSon from '@/pages/nestPage/son'
+import PageSonA from '@/pages/nestPage/sonA'
 
-const routes = createHashRouter([
+const routes = [
     {
         path: '/',
-        element: <App />,
-        children: [
-            // {
-            //     path: 'home',
-            //     element: <MyApp />,
-            // },
-        ],
-    },
-    {
-        path: '/about',
-        element: <PageA />,
+        element: <PageIndex />,
         children: [
             {
-                path: 'concat',
-                element: <div>about的子路由-concat</div>,
+                path: 'pageA',
+                element: <PageA />,
+            },
+            {
+                path: 'father',
+                element: <PageFather />,
+                children: [
+                    {
+                        path: 'son',
+                        element: <PageSon />,
+                    },
+                    {
+                        path: 'sonA',
+                        element: <PageSonA />,
+                    },
+                ],
             },
         ],
     },
-    {
-        path: '/father',
-        element: <PageFather />,
-        children: [
-            {
-                path: 'son',
-                element: <PageSon />,
-            },
-        ],
-    },
-])
+]
 
 export default routes

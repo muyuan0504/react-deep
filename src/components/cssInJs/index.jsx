@@ -2,7 +2,7 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-/** styled.header -> 会生成一个带有唯一id标识的header标签 <header class="sc-beqWNU jbPySM"><  */
+/** styled.header -> 会生成一个带有唯一id标识的header标签 <header class="sc-beqWNU jbPySM"> 之后将样式添加到 sc-beqWNU 类名中  */
 const DivHeader = styled.header`
     background-color: orange;
     color: white;
