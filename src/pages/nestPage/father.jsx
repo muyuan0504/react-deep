@@ -20,6 +20,7 @@ const PageFather = () => {
             <button onClick={handlerClick}>跳转到子路由son页面</button>
             <button onClick={handlerClickA}>跳转到子路由sonA页面</button>
             <div>
+                {/* 使用 Outlet 组件来渲染嵌套的子路由, 在Vue中等同于<router-view /> */}
                 <Outlet />
             </div>
         </div>

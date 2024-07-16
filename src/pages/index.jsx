@@ -6,6 +6,7 @@ function PageIndex() {
     return (
         <div>
             <nav>
+                <NavLink to='/home'>Navlink跳转home // </NavLink>
                 <NavLink to='/pageA'>Navlink跳转pageA // </NavLink>
                 <NavLink to='/'>Navlink跳转回根路径</NavLink>
                 <NavLink to='/father'>Navlink跳转到father页面</NavLink>

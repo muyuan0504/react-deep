@@ -12,6 +12,7 @@
 import React from 'react'
 
 import PageIndex from '@/pages/index'
+import PageHome from '@/pages/home'
 import PageA from '@/pages/PageA'
 import PageFather from '@/pages/nestPage/father'
 import PageSon from '@/pages/nestPage/son'
@@ -22,6 +23,10 @@ const routes = [
         path: '/',
         element: <PageIndex />,
         children: [
+            {
+                path: 'home',
+                element: <PageHome />,
+            },
             {
                 path: 'pageA',
                 element: <PageA />,

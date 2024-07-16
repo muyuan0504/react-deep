@@ -28,6 +28,7 @@ function UseRoute() {
 
     return (
         <React.StrictMode>
+            <h1>component use-route</h1>
             <div className={`${styles.showItem} flex-box`}>
                 <span>use-route: </span>
                 <div className={styles.showUse}>这个是border</div>

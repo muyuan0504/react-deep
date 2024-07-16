@@ -13,6 +13,7 @@ import DefineHook from '@/components/define-hook'
 import UseRoute from '@/components/use-route'
 import UseRouteComA from '@/components/use-route/UseRouteComA'
 import CssInJs from '@/components/cssInJs/index'
+import UseStore from '@/components/useStore/index'
 
 const PageHome = () => {
     const appData = { count: 0 }
@@ -21,7 +22,7 @@ const PageHome = () => {
 
     return (
         <React.StrictMode>
-            <h3>HOME: </h3>
+            <h1>HOME: </h1>
             <div className='flex-box'>这个是一个flexBox</div>
             {/* React 组件必须以大写字母开头，而 HTML 标签则必须是小写字母 */}
             {/* <UseJsx /> */}
@@ -33,6 +34,7 @@ const PageHome = () => {
             {/* <UseEffect /> */}
             {/* <UseMemo /> */}
             <UseRoute />
+            <UseStore />
             {/* <CssInJs /> */}
             {/* <UseCallback /> */}
             {/* <DefineHook /> */}
