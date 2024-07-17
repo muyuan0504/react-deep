@@ -1,3 +1,5 @@
+/** 基于 makeAutoObservable API的 状态管理 */
+
 import { makeAutoObservable } from 'mobx'
 
 class CounterStore {

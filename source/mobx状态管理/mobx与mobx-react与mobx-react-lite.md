@@ -38,6 +38,41 @@
 
 1. `observer` 高阶组件：使 React 函数组件能够响应 MobX 状态的变化。
 
+`observer` 是一个高阶组件，它使 React 组件能够响应 MobX 状态的变化。当被观察的状态发生变化时，使用 observer 包裹的组件会自动重新渲染; 所以在使用 mobx 数据时，数据的消费组件需要用
+
+observer 包裹, 如果不用 observer 包裹，那么该 mobx 数据状态发生变更，组件不会刷新
+
+**每次引用 MobX 响应式数据的组件都需要使用 observer 包裹：这确保了组件能够自动响应状态变化，并在状态变化时重新渲染**
+
+```jsx
+import React from 'react'
+
+import { observer } from 'mobx-react-lite'
+import { counterStore } from '@/store/index'
+
+const PageSon = observer(() => {
+    const handleClick = () => {
+        /** 无论是直接 counterStore.count++ 还是 counterStore.increment(), 都会响应式变更  */
+        // counterStore.count++
+        counterStore.increment()
+    }
+
+    return (
+        <div>
+            <h1>Page Son</h1>
+            <div>
+                <span>counterStore.count的值：</span>
+                <span>{counterStore.count}</span>
+            </div>
+            <div>这个页面是son.jsx</div>
+            <button onClick={handleClick}>增加</button>
+        </div>
+    )
+})
+
+export default PageSon
+```
+
 2. `useLocalObservable` 钩子：在函数组件中创建本地的可观察状态。
 
 3. `useObserver` 钩子：使函数组件能够响应 MobX 状态的变化。

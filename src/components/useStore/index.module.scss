@@ -1,0 +1,9 @@
+.todoList {
+    display: flex;
+    .todoItem {
+        font-size: 28px;
+        &:nth-child(n + 2) {
+            margin-left: 100px;
+        }
+    }
+}

@@ -9,4 +9,6 @@
 
 import counterModule from './counter'
 
+export { default as todoStore } from './todo'
+
 export const counterStore = counterModule
