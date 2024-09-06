@@ -32,13 +32,6 @@ function renderRootSync(root: FiberRoot, lanes: Lanes) {
         workInProgressTransitions = getTransitionsForLanes(root, lanes)
         prepareFreshStack(root, lanes)
     }
-
-    if (__DEV__) {
-        if (enableDebugTracing) {
-            logRenderStarted(lanes)
-        }
-    }
-
     if (enableSchedulingProfiler) {
         markRenderStarted(lanes)
     }
