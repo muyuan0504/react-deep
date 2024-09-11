@@ -8,6 +8,8 @@ import '@/static/style/common'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
+console.error('---------- aiden --------------', root, MyApp)
+
 root.render(
     // <React.StrictMode>
     //     <MyApp />

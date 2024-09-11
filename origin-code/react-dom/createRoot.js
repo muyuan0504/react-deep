@@ -19,21 +19,6 @@ export function createRoot(container: Element | Document | DocumentFragment, opt
     let transitionCallbacks = null
 
     if (options !== null && options !== undefined) {
-        if (__DEV__) {
-            if ((options: any).hydrate) {
-                console.warn('hydrate through createRoot is deprecated. Use ReactDOMClient.hydrateRoot(container, <App />) instead.')
-            } else {
-                if (typeof options === 'object' && options !== null && (options: any).$$typeof === REACT_ELEMENT_TYPE) {
-                    console.error(
-                        'You passed a JSX element to createRoot. You probably meant to ' +
-                            'call root.render instead. ' +
-                            'Example usage:\n\n' +
-                            '  let root = createRoot(domContainer);\n' +
-                            '  root.render(<App />);'
-                    )
-                }
-            }
-        }
         if (options.unstable_strictMode === true) {
             isStrictMode = true
         }
