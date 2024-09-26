@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import UseJsx from '@/components/use-jsx'
 import UseProps from '@/components/use-props'
@@ -23,6 +24,14 @@ const PageHome = () => {
     return (
         <React.StrictMode>
             <h1>HOME: </h1>
+            <section>
+                <span>国际化</span>
+                <p>
+                    <span>app.title: </span>
+                    <FormattedMessage id='app.title' defaultMessage='Default Title'></FormattedMessage>，
+                    <FormattedMessage id='app.description' defaultMessage='Default description'></FormattedMessage>
+                </p>
+            </section>
             <div className='flex-box'>这个是一个flexBox</div>
             {/* React 组件必须以大写字母开头，而 HTML 标签则必须是小写字母 */}
             {/* <UseJsx /> */}
