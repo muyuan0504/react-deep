@@ -22,3 +22,17 @@ function resolveDispatcher() {
     const dispatcher = ReactCurrentDispatcher.current
     return ((dispatcher: any): Dispatcher)
 }
+
+/**
+ * packages\react\src\ReactCurrentDispatcher.js
+ * Keeps track of the current dispatcher.
+ */
+const ReactCurrentDispatcher = {
+    /**
+     * @internal
+     * @type {ReactComponent}
+     */
+    current: (null: null | Dispatcher),
+}
+
+export default ReactCurrentDispatcher

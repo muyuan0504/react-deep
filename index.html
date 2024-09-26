@@ -7,5 +7,15 @@
     </head>
     <body>
         <div id="root"></div>
+        <script>
+            function test() {
+                console.log('执行了吗', arguments)
+                return this.tag
+            }
+
+            const a = { tag: 1 }
+
+            test.bind(a, 'hh')
+        </script>
     </body>
 </html>
