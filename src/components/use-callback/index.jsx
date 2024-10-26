@@ -24,7 +24,7 @@ export default function UseCallback(props) {
     //     setCount(count + 1)
     // }
     const handleClick = useCallback(() => {
-		// 当使用 useCallback 包裹执行函数后，除了首次执行会出发子组件A的重新渲染，后续的执行都不会再出发子组件的更新
+		// 当使用 useCallback 包裹执行函数后，除了首次执行会触发子组件A的重新渲染，后续的执行都不会再出发子组件的更新
         console.log('useCallback exec')
         setCount(count + 1)
     }, [])

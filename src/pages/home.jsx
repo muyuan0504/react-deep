@@ -15,6 +15,7 @@ import UseRoute from '@/components/use-route'
 import UseRouteComA from '@/components/use-route/UseRouteComA'
 import CssInJs from '@/components/cssInJs/index'
 import UseStore from '@/components/useStore/index'
+import InvokeChild from '@/components/invoke-child/index'
 
 const PageHome = () => {
     const appData = { count: 0 }
@@ -44,6 +45,7 @@ const PageHome = () => {
             {/* <UseMemo /> */}
             <UseRoute />
             <UseStore />
+            <InvokeChild />
             {/* <CssInJs /> */}
             {/* <UseCallback /> */}
             {/* <DefineHook /> */}
