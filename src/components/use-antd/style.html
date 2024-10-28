@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .contain {
+                display: inline-flex;
+            }
+            .btn {
+                position: relative;
+                width: 120px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                background: #ccc;
+            }
+            .wrapper {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+            .btn-use {
+                position: absolute;
+                left: -1px;
+                top: -1px;
+                width: 120px;
+                height: 32px;
+                box-shadow: 0 0 0 6px green;
+                border-radius: 6px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contain">
+            <div class="btn">
+                <span>按钮文字</span>
+                <div class="wrapper">
+                    <div class="btn-use"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
